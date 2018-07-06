@@ -1,0 +1,20 @@
+<!--
+{{#each model as |key|}}
+Name:{{key.name}}
+Dob:{{key.dob}}
+Phone:{{key.phone}}
+Email:{{key.email}}
+Company:{{key.company}}
+{{/each}}
+{{outlet}} -->
+  <button {{action "save"}} class="waves-effect waves-light btn">Add Contact</button>
+{{#each model as |contact|}}
+<div align="center">
+<div style="width:200px;background:black">
+<ul class="collection">
+    {{#link-to "contact" contact.id}}<p>{{contact.name}}</p>{{/link-to}}
+</ul>
+</div>
+</div>
+{{/each}}
+{{outlet}}

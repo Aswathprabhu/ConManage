@@ -1,0 +1,55 @@
+<style>
+
+.login {
+	position: absolute;
+	top: 45%;
+	left: 46.5%;
+	margin: -150px 0 0 -150px;
+	width:815px;
+	/* height:750px; */
+}
+.login h2,h4 { color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.3); letter-spacing:1px; text-align:center; }
+
+* { -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -ms-box-sizing:border-box; -o-box-sizing:border-box; box-sizing:border-box; }
+
+html { width: 100%; height:100%; overflow:hidden; }
+
+body {
+  width: 100%;
+  height:100%;
+  background: #092756;
+  background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -webkit-linear-gradient(top,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -webkit-linear-gradient(-45deg,  #670d10 0%,#092756 100%);
+}
+
+</style>
+
+<div class="row login">
+   <div class="col s12 m6">
+     <div class="card pink lighten-4">
+       <div class="card-content black-text">
+         <span class="card-title">Book Detail</span>
+        <br>
+        <br>
+        <table>
+        <tr>
+        <td class="f5">Title:</td><td>{{model.title}}</td>
+      </tr>
+       <tr>
+        <td class="f5">Author:</td><td><a href=""{{action "authordetail" model.author}}>{{model.author}}</a></td>
+      </tr>
+      <tr>
+      <td class="f5">Edition:</td><td>{{model.edition}}</td>
+      </tr>
+      <tr>
+      <td class="f5">Publisher:</td><td>{{model.publisher}}</td>
+      </tr>
+    </table>
+     </div>
+       <div class="card-action">
+         <a href="#"><span class="black-text">PICK</span></a>
+         <a href="#"><span class="black-text">SUBMIT</span></a>
+       </div>
+     </div>
+   </div>
+ </div>
+{{outlet}}

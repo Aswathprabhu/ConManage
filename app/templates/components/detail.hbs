@@ -1,0 +1,23 @@
+
+<div class="container">
+<div class="row">
+<div class="col s12">
+<h4 style="color:purple">Contact Detail</h4>
+
+</div>
+</div>
+<div class="row">
+<div class="col s12">
+{{contact-compo x=model}}
+<div class="left">
+    <button {{action "edit" model.id}}><p class="f6">Edit</p></button>
+</div>
+
+<div class="left">
+  <button {{action "delete" model.id}}>Delete</button>
+</div>
+</div>
+  <!-- <button {{action "Add"}}>Add Contacts</button> -->
+</div>
+</div>
+{{outlet}}

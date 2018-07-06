@@ -1,0 +1,51 @@
+<div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+
+          {{input value=model.name name="first_name" type="text" class="validate"}}
+          <label class="active" for="first_name">Name</label>
+        </div>
+      </div>
+        <div class="row">
+        <div class="input-field col s6">
+          {{input value=model.dob name="dob" type="date" class="validate"}}
+          <label class="active" for="last_name">DOB</label>
+        </div>
+     </div>
+      <div class="row">
+        <div class="input-field col s6">
+          {{input value=model.phone name="phone" type="text" class="validate"}}
+          <label class="active" for="last_name">Phone Number</label>
+        </div>
+
+      </div>
+      <div class="row">
+
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          {{input value=model.email name="email" type="email" class="validate"}}
+          <label class="active" for="email">Email</label>
+        </div>
+
+      </div>
+
+
+        <div class="row">
+        <div class="input-field col s6">
+          {{input value=model.company name="company" type="text" class="validate"}}
+          <label class="active" for="email">Company</label>
+        </div>
+      </div>
+      {{#if model.id}}
+      <button {{action "save" model.id}}class="waves-effect waves-light btn">Save</button>
+      {{else}}
+      <button {{action "save"}}class="waves-effect waves-light btn">Save</button>
+      {{/if}}
+    </form>
+  </div>
+
+
+
+{{outlet}}

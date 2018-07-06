@@ -1,0 +1,10 @@
+<!-- {{input key-up=(action "filteredListOfBooks") type="text" value=title placeholder="Enter book title"}} -->
+
+<!-- {{#each-in filteredBooks as |name props|}}
+ {{yield props}}
+{{/each-in}} -->
+{{#each book_objo as |book|}}
+<ul class="collection">
+     {{#link-to "bookdetail" book.id}}<li class="collection-item">{{book.title}}</li>{{/link-to}}
+</ul>
+{{/each}}
